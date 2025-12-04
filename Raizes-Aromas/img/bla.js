@@ -2,7 +2,7 @@
 let menu = document.getElementById("menu")
 let iconeBarras = document.getElementById("icone-barras")
 let iconeX = document.getElementById("icone-x")
-// let body = document.getElementsByTagName("body")
+let body = document.getElementsByTagName("body")
 let sombra = document.getElementById("sombra")
 
 
@@ -36,10 +36,32 @@ function abreFechaMenu() {
 onresize = () => {
     if (window.getComputedStyle(menu).right == "-210px") {
         // Mostrar icone X
-        iconeX.style.display = "none"
+        iconeX.style.display = "inline"
     }
     else{
         // Esconder icone barras
-        iconeBarras.style.display = "inline"
+        iconeBarras.style.display = "none"
     }
 }
+
+
+//Filtro dos Livros
+const filtro_btn = document.querySelectorAll('.filter_btn')
+const card_livros = document.querySelectorAll('.card_livro')
+
+filtro_btn.forEach(button => {
+    button.addEventListener('click', () => {
+        filtro_btn.forEach(btn => btn.classList.remove('active'));
+        button.classList.add('active');
+
+        const filtro = button.getAttribute('data-filter');
+
+        card_livros.forEach(card => {
+            if (filtro === 'all' || card.getAttribute('data-category') === filtro){
+                card.style.display = 'block';
+            }else{
+                card.style.display = 'none';
+            }
+        });
+    });
+});

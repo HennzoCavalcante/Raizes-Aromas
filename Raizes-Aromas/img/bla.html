@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <!-- Config base -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Páginas & Grãos</title>
+
+    <!-- Link Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+
+
+    <!-- Favicon da página -->
+    <link rel="icon" type="image/svg" href="./img/favicon.svg">
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"
+        defer></script>
+    <script src="script.js" defer></script>
+</head>
+
+<body>
+    <main>
+        <div id="sombra"></div>
+        <header class="espaco_lateral">
+
+            <img src="./img/Logo.svg" alt="Logo da Páginas e Grãos">
+
+            <nav id="menu" class="menu">
+                <a href="#nossa_historia">Sobre</a>
+                <a href="#cardapio">Cardápio</a>
+                <a href="#eventos">Eventos</a>
+                <a href="#livraria">Livraria</a>
+                <a href="#contato">Contato</a>
+            </nav>
+
+            <!-- Menu de Hamburguer-->
+            <button id="menu_botao" onclick="abreFechaMenu()">
+                <svg id="icone-barras" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <path
+                        d="M96 160C96 142.3 110.3 128 128 128L512 128C529.7 128 544 142.3 544 160C544 177.7 529.7 192 512 192L128 192C110.3 192 96 177.7 96 160zM96 320C96 302.3 110.3 288 128 288L512 288C529.7 288 544 302.3 544 320C544 337.7 529.7 352 512 352L128 352C110.3 352 96 337.7 96 320zM544 480C544 497.7 529.7 512 512 512L128 512C110.3 512 96 497.7 96 480C96 462.3 110.3 448 128 448L512 448C529.7 448 544 462.3 544 480z" />
+                </svg>
+
+                <svg id="icone-x" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640">
+                    <path
+                        d="M504.6 148.5C515.9 134.9 514.1 114.7 500.5 103.4C486.9 92.1 466.7 93.9 455.4 107.5L320 270L184.6 107.5C173.3 93.9 153.1 92.1 139.5 103.4C125.9 114.7 124.1 134.9 135.4 148.5L278.3 320L135.4 491.5C124.1 505.1 125.9 525.3 139.5 536.6C153.1 547.9 173.3 546.1 184.6 532.5L320 370L455.4 532.5C466.7 546.1 486.9 547.9 500.5 536.6C514.1 525.3 515.9 505.1 504.6 491.5L361.7 320L504.6 148.5z" />
+                </svg>
+            </button>
+
+        </header>
+
+        <section class="banner"></section>
+
+        <section class="icons espaco_lateral">
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none" />
+                    <line x1="88" y1="24" x2="88" y2="56" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="16" />
+                    <line x1="120" y1="24" x2="120" y2="56" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="16" />
+                    <line x1="152" y1="24" x2="152" y2="56" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="16" />
+                    <line x1="32" y1="216" x2="208" y2="216" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="16" />
+                    <path d="M83.3,216A88,88,0,0,1,32,136V88H208v48a88,88,0,0,1-51.3,80" fill="none"
+                        stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                    <path d="M208,88h0a32,32,0,0,1,32,32v8a32,32,0,0,1-32,32h-3.38" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                </svg>
+                <p>Café<br>Especial</p>
+            </div>
+
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none" />
+                    <path d="M48,216a24,24,0,0,1,24-24H208V32H72A24,24,0,0,0,48,56Z" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                    <polyline points="48 216 48 224 192 224" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="16" />
+                </svg>
+                <p>Livros<br>Exclusivos</p>
+            </div>
+
+            <div class="icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256">
+                    <rect width="256" height="256" fill="none" />
+                    <path d="M24,112V72a8,8,0,0,1,8-8H224a8,8,0,0,1,8,8v40" fill="none" stroke="currentColor"
+                        stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                    <line x1="216" y1="176" x2="216" y2="200" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="16" />
+                    <line x1="40" y1="176" x2="40" y2="200" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="16" />
+                    <path
+                        d="M208,144V120a8,8,0,0,1,8-8h16a8,8,0,0,1,8,8v48a8,8,0,0,1-8,8H24a8,8,0,0,1-8-8V120a8,8,0,0,1,8-8H40a8,8,0,0,1,8,8v24Z"
+                        fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                        stroke-width="16" />
+                    <line x1="128" y1="64" x2="128" y2="144" fill="none" stroke="currentColor" stroke-linecap="round"
+                        stroke-linejoin="round" stroke-width="16" />
+                </svg>
+                <p>Ambiente<br>Aconchegante</p>
+            </div>
+        </section>
+
+        <section id="nossa_historia" class="espaco_lateral">
+            <div class="descricao">
+                <h2 class="titulo"><span>Nossa História</span></h2>
+                <p class="texto">A Páginas e Grãos é uma livraria-cafeteria criada por Ana, jornalista apaixonada por
+                    literatura, e Miguel, barista com formação em gastronomia. Um refúgio acolhedor onde café, livros e
+                    boas conversas se encontram, oferecendo cafés autorais, curadoria literária e eventos culturais como
+                    saraus, clubes do livro e exposições.</p>
+            </div>
+            <div class="imgs_nh">
+                <div class="img01_nh">
+                    <img src="./img/img01-nossaHistoria.png" alt="Café da Páginas e Grãos">
+                </div>
+                <div class="img02_nh">
+                    <img src="./img/img02-nossaHistoria.png" alt="Placa da Páginas e Grãos">
+                    <img src="./img/img03-nossaHistoria.png" alt="Uma mesa de café">
+                </div>
+            </div>
+        </section>
+
+        <section id="cardapio" class="espaco_lateral">
+            <h2 class="titulo">Nosso Cardápio</h2>
+            <div class="cards_cardapio">
+                <div class="card_cardapio">
+                    <div class="img_comidas">
+                        <img src="./img/Café.png" alt="">
+                    </div>
+                    <div class="conteudo_cardapio">
+                        <h3>Bebidas</h3>
+                        <p class="texto">
+                            Expresso Tradicional<br>
+                            Mocha Literário<br>
+                            Cappuccino da Casa<br>
+                            Iced Latte<br>
+                            Frappé de Chocolate<br>
+                            Soda Italiana
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card_cardapio">
+                    <div class="img_comidas">
+                        <img src="./img/Pão_de_queijo.png" alt="">
+                    </div>
+                    <div class="conteudo_cardapio">
+                        <h3>Salgados</h3>
+                        <p class="texto">
+                            Croissant Manteigado<br>
+                            Pão de Queijo<br>
+                            Sanduíche Literário<br>
+                            Empanada Argentina<br>
+                            Quiche<br>
+                            Misto Quente
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card_cardapio">
+                    <div class="img_comidas">
+                        <img src="./img/Bolo.png" alt="">
+                    </div>
+                    <div class="conteudo_cardapio">
+                        <h3>Doces</h3>
+                        <p class="texto">
+                            Bolo do dia<br>
+                            Brownie de Cacau<br>
+                            Cookie Literário<br>
+                            Torta de Maça<br>
+                            Bolinho de chuva<br>
+                            Carolinas<br>
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="eventos" class="espaco_lateral">
+            <h2 class="titulo">
+                Próximos Eventos
+            </h2>
+
+            <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <div class="card_eventos">
+                            <div class="img_eventos">
+                                <img src="./img/Slider01.png" alt="">
+                            </div>
+                            <div class="conteudo_eventos">
+                                <h3>Sarau de Poesia</h3>
+                                <div class="texto_evento">
+                                    <p class="texto">25 de Novembro de 2025</p>
+                                    <p class="texto">Uma noite de versos livres e emoções compartilhadas. Traga sua
+                                        poesia ou apenas
+                                        venha curtir.</p>
+                                </div>
+                                <a href="#">Participar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+
+                        <div class="card_eventos">
+                            <div class="img_eventos">
+                                <img src="./img/Slider02.png" alt="">
+                            </div>
+                            <div class="conteudo_eventos">
+                                <h3>Clube do Livro: A Hora da Estrela</h3>
+                                <div class="texto_evento">
+                                    <p class="texto">05 de Dezembro de 2025</p>
+                                    <p class="texto">Discussão sobre a obra-prima de Clarice Lisperctor. Um mergulho na
+                                        fragilidade da existência e no silêncio das vozes esquecidas. </p>
+                                </div>
+                                <a href="#">Participar</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item">
+                        <div class="card_eventos">
+                            <div class="img_eventos">
+                                <img src="./img/Slider03.png" alt="">
+                            </div>
+                            <div class="conteudo_eventos">
+                                <h3>Clube do Livro: A Metamorfose</h3>
+                                <div class="texto_evento">
+                                    <p class="texto">18 de Dezembro de 2025</p>
+                                    <p class="texto">Discussão sobre a obra-prima de Franz Kafka. Um mergulho na
+                                        angústia da
+                                        transformação e no labirinto da solidão humana. </p>
+                                </div>
+                                <a href="#">Participar</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path
+                                d="M169.4 297.4C156.9 309.9 156.9 330.2 169.4 342.7L361.4 534.7C373.9 547.2 394.2 547.2 406.7 534.7C419.2 522.2 419.2 501.9 406.7 489.4L237.3 320L406.6 150.6C419.1 138.1 419.1 117.8 406.6 105.3C394.1 92.8 373.8 92.8 361.3 105.3L169.3 297.3z" />
+                        </svg></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                            <path
+                                d="M471.1 297.4C483.6 309.9 483.6 330.2 471.1 342.7L279.1 534.7C266.6 547.2 246.3 547.2 233.8 534.7C221.3 522.2 221.3 501.9 233.8 489.4L403.2 320L233.9 150.6C221.4 138.1 221.4 117.8 233.9 105.3C246.4 92.8 266.7 92.8 279.2 105.3L471.2 297.3z" />
+                        </svg></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+
+
+
+
+
+        </section>
+
+        <section id="livraria" class="espaco_lateral">
+            <h2 class="titulo">
+                Nossa Livraria
+            </h2>
+
+            <div class="filter_buttons">
+                <button class="filter_btn active" data-filter="all">Todos</button>
+                <button class="filter_btn" data-filter="filosofia">Filosofia</button>
+                <button class="filter_btn" data-filter="ficcao">Ficção</button>
+                <button class="filter_btn" data-filter="psicologia">Psicologia</button>
+            </div>
+
+            <div class="livros">
+                <div class="card_livro" data-category="filosofia">
+                    <img src="./img/livro_01.png" alt="Capa do Livro">
+                    <h3>Leviatã</h3>
+                    <p>Thomas Hobbes</p>
+                    <span>R$ 20</span>
+                </div>
+
+                <div class="card_livro" data-category="filosofia">
+                    <img src="./img/livro_02.png" alt="Capa do Livro">
+                    <h3>O Príncipe</h3>
+                    <p>Nicolau Maquiavel</p>
+                    <span>R$ 29,99</span>
+                </div>
+
+                <div class="card_livro" data-category="ficcao">
+                    <img src="./img/livro_03.png" alt="Capa do Livro">
+                    <h3>A revolução dos Bichos</h3>
+                    <p>George Orwell</p>
+                    <span>R$ 45,99</span>
+                </div>
+
+                <div class="card_livro" data-category="psicologia">
+                    <img src="./img/livro_04.png" alt="Capa do Livro">
+                    <h3>O Poder do hábito</h3>
+                    <p>Charles Duhigg</p>
+                    <span>R$ 55,99</span>
+                </div>
+            </div>
+
+        </section>
+
+        <section id="contato" class="espaco_lateral">
+            <h2 class="titulo">
+                Entre em Contato
+            </h2>
+
+            <div class="conteudo_contato">
+                <form onsubmit="entrarEmContato(event)">
+                    <div class="campo">
+                        <label for="campo_nome">Qual é o seu nome?</label>
+                        <input id="campo-nome" placeholder="Digite o seu nome..." type="text">
+                    </div>
+
+                    <div class="campo">
+                        <label for="campo_email">Em qual email podemos te responder?</label>
+                        <input id="campo_email" placeholder="Digite o seu email..." type="email">
+                    </div>
+
+                    <div class="campo_descricao">
+                        <label for="campo_texto">Descreva sua dúvida</label>
+                        <textarea id="campo_texto" placeholder="Informe sua dúvida" cols="30" rows="5"></textarea>
+                    </div>
+                    <button type="submit">Enviar</button>
+                </form>
+
+                <iframe class="mapa" width="50%" height="550" frameborder="0"
+                    src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=Rua%20Niter%C3%B3i%20180,%20S%C3%A3o%20Caetano%20do%20Sul%20-%20S%C3%A3o%20Paulo,%20Brasil+(My%20Business%20Name)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe>
+
+            </div>
+
+        </section>
+
+        <section id="horarios" class="espaco_lateral">
+            <img src="./img/img-Loja Frente 1.png" alt="">
+            <div class="conteudo_horarios">
+                <h2 class="titulo">
+                    Horário de Funcionamento
+                </h2>
+
+                <!-- <p class="texto">Segunda-feira 9:00am-10:00pm</p>
+                <p class="texto">Terça-feira 9:00am-10:00pm</p>
+                <p class="texto">Quarta-feira 9:00am-10:00pm</p>
+                <p class="texto">Quint-feira 9:00am-10:00pm</p>
+                <p class="texto">Sexta-feira 9:00am-10:00pm</p>
+                <p class="texto">Sábado 9:00am-6:00pm</p>
+                <p class="texto">Domingo 9:00am-12:00pm</p> -->
+                <table>
+                    <tr>
+                        <td>Segunda-feira</td>
+                        <td>9:00am - 10:00pm</td>
+                    </tr>
+                    <tr>
+                        <td>Terça-feira</td>
+                        <td>9:00am - 10:00pm</td>
+                    </tr>
+                    <tr>
+                        <td>Quarta-feira</td>
+                        <td>9:00am - 10:00pm</td>
+                    </tr>
+                    <tr>
+                        <td>Quinta-feira</td>
+                        <td>9:00am - 10:00pm</td>
+                    </tr>
+                    <tr>
+                        <td>Sexta-feira</td>
+                        <td>9:00am - 10:00pm</td>
+                    </tr>
+                    <tr>
+                        <td>Sábado</td>
+                        <td>9:00am - 6:00pm</td>
+                    </tr>
+                    <tr>
+                        <td>Domingo</td>
+                        <td>9:00am - 12:00pm</td>
+                    </tr>
+                </table>
+            </div>
+        </section>
+
+        <footer>
+            <div class="roda_pe espaco_lateral">
+                <img src="./img/Logos.svg" alt="">
+                <div class="redes_sociais">
+                    <p class="texto">Estamos também nas redes sociais</p>
+                    <div class="icon_redes">
+                        <a href=""><svg viewBox="0 0 256 256">
+                                <rect width="256" height="256" fill="none" />
+                                <circle cx="128" cy="128" r="40" fill="none" stroke="currentColor"
+                                    stroke-miterlimit="10" stroke-width="16" />
+                                <rect x="32" y="32" width="192" height="192" rx="48" fill="none" stroke="currentColor"
+                                    stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
+                                <circle cx="180" cy="76" r="12" />
+                            </svg></a>
+                        <a href="">
+                            <svg viewBox="0 0 256 256">
+                                <rect width="256" height="256" fill="none" />
+                                <path
+                                    d="M72,104a32,32,0,0,1,32-32l16,32-12.32,18.47a48.19,48.19,0,0,0,25.85,25.85L152,136l32,16a32,32,0,0,1-32,32A80,80,0,0,1,72,104Z"
+                                    fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="16" />
+                                <path
+                                    d="M79.93,211.11a96,96,0,1,0-35-35h0L32.42,213.46a8,8,0,0,0,10.12,10.12l37.39-12.47Z"
+                                    fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                                    stroke-width="16" />
+                            </svg>
+                        </a>
+                        <a href="">
+                            <svg viewBox="0 0 640 640"><!--!Font Awesome Free v7.1.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.-->
+                                <path
+                                    d="M196.3 512L103.4 512L103.4 212.9L196.3 212.9L196.3 512zM149.8 172.1C120.1 172.1 96 147.5 96 117.8C96 103.5 101.7 89.9 111.8 79.8C121.9 69.7 135.6 64 149.8 64C164 64 177.7 69.7 187.8 79.8C197.9 89.9 203.6 103.6 203.6 117.8C203.6 147.5 179.5 172.1 149.8 172.1zM543.9 512L451.2 512L451.2 366.4C451.2 331.7 450.5 287.2 402.9 287.2C354.6 287.2 347.2 324.9 347.2 363.9L347.2 512L254.4 512L254.4 212.9L343.5 212.9L343.5 253.7L344.8 253.7C357.2 230.2 387.5 205.4 432.7 205.4C526.7 205.4 544 267.3 544 347.7L544 512L543.9 512z" />
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <p class="texto">© 2025 Páginas e Grãos. Todos os direitos reservados.</p>
+        </footer>
+    </main>
+</body>
+
+</html>

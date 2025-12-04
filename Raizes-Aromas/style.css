@@ -23,16 +23,38 @@
 
 }
 
+body {
+    overflow-x: hidden;
+    background-color: var(--fundo);
+}
+
 /* ------------------- Menu ------------------- */
 
+.banner {
+    background-image: url("./img/banner.png");
+    background-repeat: no-repeat;
+    background-position: 0 600px;
+
+    height: 120vh;
+
+    display: flex;
+    justify-content: space-between;
+    background-size: contain;
+
+}
+
 header img {
-    width: 255px;
-    height: 235px;
+    width: 375px;
+    height: 355px;
+
 }
 
 .menu {
-    max-width: 700px;
-    width: 70%;
+    max-width: 1920px;
+    width: 100%;
+
+    text-decoration: underline;
+
     display: flex;
     justify-content: space-between;
     justify-self: center;
@@ -43,6 +65,7 @@ header img {
     font-size: 25px;
     color: #000;
     text-decoration: none;
+
     text-transform: uppercase;
 
     font-family: "montserrat", sans-serif;
@@ -63,6 +86,7 @@ header img {
 /* ----------------- Responsividade ----------------- */
 
 @media screen and (max-width: 768px) {
+
     #sombra {
         background-color: var(--footer);
         backdrop-filter: blur(10px);
@@ -71,10 +95,10 @@ header img {
         width: 100vw;
         height: 100vh;
         right: -101vw;
-        transition: 0.5s;
+        transition: .5s;
     }
 
-    #menuBotão {
+    #menu_botao {
         display: block;
         z-index: 1;
     }
@@ -94,7 +118,7 @@ header img {
     }
 
     header svg {
-        fill: var(--hover)
+        fill: var(--hover);
     }
 
     #icone-barras {
@@ -102,6 +126,7 @@ header img {
     }
 
     nav.menu {
+        /* height: 100vh; */
         width: 200px;
         padding: 0px 30px;
 
@@ -113,7 +138,105 @@ header img {
         top: 165px;
         right: -210px;
         z-index: 1;
-        transition: 0.5s;
+        transition: .5s;
     }
+}
 
+/* ----------------- Sobre ----------------- */
+
+
+#sobre {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+
+    width: 80vw;
+    max-width: 1400px;
+    margin: 80px auto;
+
+    margin-bottom: 200px;
+    flex-wrap: wrap;
+}
+
+.mockup img {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+
+    margin-top: 50px;
+    margin-left: 230px;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.conteudo-sobre {
+    max-width: 600px;
+    margin-left: -50px;
+}
+
+.titulo {
+    font-family: "Montserrat", sans-serif;
+    margin-left: 250px;
+    text-decoration: underline;
+}
+
+#sobre h2 {
+    margin-right: 5px;
+}
+
+#sobre p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 25px;
+    text-align: justify;
+    margin-top: 70px;
+    display: flex;
+    justify-content: center;
+}
+
+/* ----------------- Footer ----------------- */
+
+footer {
+    height: 100%;
+    background-color: var(--footer);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 60px;
+}
+
+.roda_pe {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 50px;
+    margin-top: 50px;
+}
+
+.roda_pe img {
+    width: 350px;
+    max-width: 60%;
+}
+
+.icon_redes {
+    display: flex;
+    gap: 10px;
+}
+
+.icon_redes a {
+    width: 60px;
+    text-decoration: none;
+    color: white;
+    fill: white;
+}
+
+.icon_redes svg:hover {
+    color: var(--hover);
+    fill: var(--hover);
+}
+
+footer .texto {
+    text-align: center;
+    color: white;
 }
